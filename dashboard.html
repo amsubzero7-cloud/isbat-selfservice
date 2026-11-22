@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISBAT University | Student Dashboard</title>
+    <!-- External CSS for all layout -->
+    <link rel="stylesheet" href="portal.css">
+    
+    <!-- Internal CSS for the 2x2 Quick-Links Grid -->
+    <style>
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .quick-link-card {
+            background-color: #8e3434;
+            border: 1px solid #32373e;
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(26, 26, 46, 0.08);
+            border-color: #1A1A2E;
+        }
+
+        .quick-link-card h4 {
+            font-size: 1.15rem;
+            color: #1A1A2E;
+            margin-bottom: 8px;
+        }
+
+        .quick-link-card p {
+            font-size: 0.9rem;
+            color: #666666;
+            margin-bottom: 18px;
+        }
+
+        .quick-link-card a {
+            align-self: flex-start;
+            text-decoration: none;
+            background-color: #1A1A2E;
+            color: #FFFFFF;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .quick-link-card a:hover {
+            background-color: #E94560;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <h2>ISBAT</h2>
+            <span>University Portal</span>
+        </div>
+        <div class="student-profile">
+            <p>David Mukasa</p>
+            <small>ID: ISBAT/24/BIT/0412</small>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="courses.html">My Courses</a></li>
+            <li><a href="fees.html">Fee Statement</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Area -->
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Welcome, David Mukasa</h1>
+            <div class="header-meta">
+                <span class="date-display">Sunday, November 22, 2026</span>
+                <!-- Inline CSS only for the status badge -->
+                <span class="status-badge" style="background-color: #EAF3DE; color: #27500A;">Active</span>
+            </div>
+        </header>
+
+        <!-- 3 Summary Metric Cards (Flexbox) -->
+        <section class="metrics-container">
+            <div class="metric-card">
+                <h3>Cumulative GPA</h3>
+                <div class="metric-value">3.82</div>
+            </div>
+            <div class="metric-card">
+                <h3>Credit Hours Earned</h3>
+                <div class="metric-value">48 / 120</div>
+            </div>
+            <div class="metric-card">
+                <h3>Outstanding Fee Balance</h3>
+                <div class="metric-value">UGX 350,000</div>
+            </div>
+        </section>
+
+        <!-- Quick-Links Grid (2x2) -->
+        <section>
+            <h2 class="section-title">Quick Links</h2>
+            <div class="quick-links-grid">
+                <div class="quick-link-card">
+                    <div>
+                        <h4>Dashboard</h4>
+                        <p>View your academic standing, GPA overview, and semester alerts.</p>
+                    </div>
+                    <a href="dashboard.html">Go to Dashboard</a>
+                </div>
+
+                <div class="quick-link-card">
+                    <div>
+                        <h4>My Courses</h4>
+                        <p>Check enrolled units, lecturer assignments, and your weekly lecture timetable.</p>
+                    </div>
+                    <a href="courses.html">View My Courses</a>
+                </div>
+
+                <div class="quick-link-card">
+                    <div>
+                        <h4>Fee Statement</h4>
+                        <p>Download tuition invoices, view payment receipts, and check current balances.</p>
+                    </div>
+                    <a href="fees.html">Open Fee Statement</a>
+                </div>
+
+                <div class="quick-link-card">
+                    <div>
+                        <h4>Update Profile</h4>
+                        <p>Manage your contact phone number, next-of-kin details, and portal password.</p>
+                    </div>
+                    <a href="#update-profile">Edit Profile</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
